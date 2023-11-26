@@ -1,5 +1,9 @@
+import { useContext } from 'react';
+import { AppContext } from '../AppContext';
+
 export const PageWelcome = () => {
+	const { userName } = useContext(AppContext);
 	return (
-		<p>This is the welcome page.</p>
+		<p>Welcome, {userName}!</p>
 	)
 }

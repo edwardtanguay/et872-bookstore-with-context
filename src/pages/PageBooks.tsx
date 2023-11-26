@@ -1,5 +1,10 @@
+import { useContext } from 'react';
+import { AppContext } from '../AppContext';
+
 export const PageBooks = () => {
+	const { userName } = useContext(AppContext);
+
 	return (
-		<p>This is the books page.</p>
+		<p>Hello, {userName}, which books would you like to buy?</p>
 	)
 }

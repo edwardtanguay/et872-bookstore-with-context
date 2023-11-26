@@ -1,5 +1,10 @@
+import { useContext } from 'react';
+import { AppContext } from '../AppContext';
+
 export const PageCheckout = () => {
+	const { userName } = useContext(AppContext);
+
 	return (
-		<p>This is the checkout page.</p>
+		<p>{userName}, you are one step away from your books being delivered!</p>
 	)
 }
