@@ -1,9 +1,19 @@
-import { useContext } from 'react';
-import { AppContext } from '../AppContext';
+import { useContext } from "react";
+import { AppContext } from "../AppContext";
 
 export const PageWelcome = () => {
-	const { userName } = useContext(AppContext);
+	const { userName, setUserName } = useContext(AppContext);
 	return (
-		<p>Welcome, {userName}!</p>
-	)
-}
+		<>
+			{userName && <p>Welcome, {userName}!</p>}
+			<form className="mt-3">
+				Your name:{" "}
+				<input
+					type="text"
+					value={userName}
+					onChange={(e) => setUserName(e.target.value)}
+				/>
+			</form>
+		</>
+	);
+};

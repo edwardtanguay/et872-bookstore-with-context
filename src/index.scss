@@ -6,6 +6,9 @@
 	h1 {
 		font-variant: small-caps;
 	}
+	button {
+		@apply inline-flex items-center px-1 py-0 text-gray-500 bg-gray-100 rounded hover:bg-gray-200 hover:text-gray-600;
+	}
 }
 
 a.active {
