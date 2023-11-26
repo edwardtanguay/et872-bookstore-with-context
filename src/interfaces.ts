@@ -3,3 +3,7 @@ export interface ITechBook {
 	idCode: string;
 	title: string;
 }
+
+export interface ICart {
+	items: ITechBook[];
+}
